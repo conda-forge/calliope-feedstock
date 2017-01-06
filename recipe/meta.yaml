@@ -15,6 +15,8 @@ build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [py<35]
+  # Basemap does not yet have a py36 version
+  skip: True  # [py36]
   entry_points:
     - calliope = calliope.cli:cli
 
