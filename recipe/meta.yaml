@@ -12,11 +12,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: True  # [py<35]
-  # Basemap does not yet have a py36 version
-  skip: True  # [py36]
+  # No py36 version yet: basemap, pyomo
+  skip: True  # [py<35 or py>35]
   entry_points:
     - calliope = calliope.cli:cli
 
@@ -40,8 +39,6 @@ requirements:
     - numpy >=1.11
     - pandas >=0.19.0,<0.20
     - pyomo >=5.0,<5.1
-    - pytest
-    - pytest-cov
     - pyyaml >=3.11
     - scipy
     - seaborn
