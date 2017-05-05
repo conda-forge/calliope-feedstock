@@ -1,6 +1,6 @@
 {% set name = "calliope" %}
-{% set version = "0.4.1" %}
-{% set sha256 = "95dfe677aa7e6fc1d7c7576c5c33aa12c53b1518225404b2b22b696c2a773049" %}
+{% set version = "0.5.0" %}
+{% set md5 = "b7d4c13e60cddaf6a5b6321ee92cf5fa" %}
 
 package:
   name: {{ name|lower }}
@@ -9,10 +9,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  md5: {{ md5 }}
 
 build:
-  number: 2
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   # No py36 version yet: basemap, pyomo
   skip: True  # [py<35 or py>35]
@@ -32,18 +32,18 @@ requirements:
     - glpk ==4.59
     - hdf5 1.8.17|1.8.17.*
     - libnetcdf 4.4.*
-    - matplotlib >=1.5
+    - matplotlib >=2.0
     - netcdf4 >=1.2.2
     - networkx
     - numexpr >=2.3.1
-    - numpy >=1.11
-    - pandas >=0.19.0,<0.20
+    - numpy >=1.2
+    - pandas >=0.19.2,<0.20
     - pyomo >=5.0,<5.1
     - pyyaml >=3.11
     - scipy
     - seaborn
     - shapely
-    - xarray >=0.8.2
+    - xarray >=0.9.5,<0.10
 
 test:
   imports:
@@ -69,3 +69,4 @@ about:
 extra:
   recipe-maintainers:
     - sjpfenninger
+    - brynpickering
