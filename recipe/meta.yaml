@@ -1,6 +1,6 @@
 {% set name = "calliope" %}
-{% set version = "0.5.0" %}
-{% set md5 = "b7d4c13e60cddaf6a5b6321ee92cf5fa" %}
+{% set version = "0.5.1" %}
+{% set md5 = "711d1c60ffa5331b9bee37773ddf8b9e" %}
 
 package:
   name: {{ name|lower }}
