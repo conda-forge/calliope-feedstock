@@ -39,7 +39,7 @@ requirements:
     - numpy >=1.12
     - pandas >=0.19.2,<0.20
     - pyomo >=5.2,<5.3
-    - pyyaml >=3.11
+    - ruamel_yaml >=0.11
     - scipy
     - seaborn
     - shapely
