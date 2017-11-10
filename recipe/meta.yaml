@@ -1,6 +1,6 @@
 {% set name = "calliope" %}
-{% set version = "0.5.3" %}
-{% set md5 = "4a56256c49c4dfbcc80ec454d78a08cd" %}
+{% set version = "0.5.4" %}
+{% set md5 = "e49fb82edac08caca7e206c782d5387a" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: True  # [py<35 or py>36]
+  skip: True  # [py<36 or py>36]
   entry_points:
     - calliope = calliope.cli:cli
 
@@ -23,7 +23,7 @@ requirements:
     - python
     - setuptools
   run:
-    - python >=3.5
+    - python >=3.6
     - basemap
     - basemap-data-hires  # Otherwise we get an error on calling some plotting funcs
     - bottleneck
@@ -39,7 +39,7 @@ requirements:
     - numpy >=1.12
     - pandas >=0.19.2,<0.20
     - pyomo >=5.2,<5.3
-    - ruamel_yaml >=0.11
+    - ruamel.yaml <=0.15
     - scipy
     - seaborn
     - shapely
