@@ -1,6 +1,6 @@
 {% set name = "calliope" %}
-{% set version = "0.5.4" %}
-{% set md5 = "e49fb82edac08caca7e206c782d5387a" %}
+{% set version = "0.5.5" %}
+{% set md5 = "cd8a949a23041132eef72b3e152248e2" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   md5: {{ md5 }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [py<36 or py>36]
   entry_points:
