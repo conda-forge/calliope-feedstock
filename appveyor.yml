@@ -43,7 +43,7 @@ install:
 
     # Add path, activate `conda` and update conda.
     - cmd: call %CONDA_INSTALL_LOCN%\Scripts\activate.bat
-    - cmd: conda install --yes --quiet conda=4.3 # temporary fix from https://github.com/conda/conda/issues/6527
+    - cmd: conda update --yes --quiet conda # revert the previous temporary fix, might now not be needed
 
     - cmd: set PYTHONUNBUFFERED=1
 
