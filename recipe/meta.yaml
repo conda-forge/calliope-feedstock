@@ -1,6 +1,6 @@
 {% set name = "calliope" %}
-{% set version = "0.5.5" %}
-{% set md5 = "cd8a949a23041132eef72b3e152248e2" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "965aa27f0f5b9c9a91429c39d130c8d1a40343de49e25178e7eaa1899c41c1ba" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  md5: {{ md5 }}
+  sha256: {{ sha256 }}
 
 build:
   number: 0
@@ -24,31 +24,27 @@ requirements:
     - setuptools
   run:
     - python >=3.6
-    - basemap
-    - basemap-data-hires  # Otherwise we get an error on calling some plotting funcs
     - bottleneck
     - click >=3.3
-    - descartes
+    - cufflinks-py >=0.12.1
     - glpk >=4.61
     - hdf5 1.8.18|1.8.18.*
+    - ipython >=6.2.1
     - libnetcdf 4.4.*
-    - matplotlib >=2.0
+    - natsort >=5.2
     - netcdf4 >=1.2.2
-    - networkx
     - numexpr >=2.3.1
-    - numpy >=1.12
-    - pandas >=0.19.2,<0.20
-    - pyomo >=5.2,<5.3
+    - numpy >=1.14
+    - pandas >=0.22,<0.23
+    - plotly >=2.5
+    - pyomo >=5.4,<5.5
     - ruamel.yaml <=0.15
-    - scipy
-    - seaborn
-    - shapely
-    - xarray >=0.9.5,<0.10
+    - scikit-learn >=0.19.1
+    - xarray >=0.10.0,<0.11
 
 test:
   imports:
     - calliope
-    - calliope.analysis
   commands:
     - calliope --help
 
