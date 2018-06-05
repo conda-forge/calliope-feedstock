@@ -18,16 +18,14 @@ a clear separation of framework (code) and model (data).
 Current build status
 ====================
 
-![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
-![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/calliope-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/calliope-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/calliope-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/calliope-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/calliope-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/calliope-feedstock/branch/master)
 
 Current release info
 ====================
-
-| Name | Downloads | Version | Platforms |
-| --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-calliope-green.svg)](https://anaconda.org/conda-forge/calliope) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/calliope.svg)](https://anaconda.org/conda-forge/calliope) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/calliope.svg)](https://anaconda.org/conda-forge/calliope) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/calliope.svg)](https://anaconda.org/conda-forge/calliope) |
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/calliope/badges/version.svg)](https://anaconda.org/conda-forge/calliope)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/calliope/badges/downloads.svg)](https://anaconda.org/conda-forge/calliope)
 
 Installing calliope
 ===================
@@ -72,7 +70,6 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
