@@ -1,6 +1,6 @@
 {% set name = "calliope" %}
-{% set version = "0.6.1" %}
-{% set sha256 = "d7c7e53247b6fb0b3439ca4948239a38423e9f020f112fb6c6eedb189ee23b66" %}
+{% set version = "0.6.2" %}
+{% set sha256 = "f66b120336fe5be668e6c1e41f1b0cfbb40adf73b1f850d02bce90b0ecc456a7" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [py<36 or py>36]
   entry_points:
