@@ -1,6 +1,6 @@
 {% set name = "calliope" %}
-{% set version = "0.6.2" %}
-{% set sha256 = "f66b120336fe5be668e6c1e41f1b0cfbb40adf73b1f850d02bce90b0ecc456a7" %}
+{% set version = "0.6.3" %}
+{% set sha256 = "6423bb66063d0d27c3c0d0b4791723a94f29e4075316ab29338e98de2e60e59b" %}
 
 package:
   name: {{ name|lower }}
@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: True  # [py<36 or py>36]
+  skip: True  # [py<36 or py>37]
   entry_points:
     - calliope = calliope.cli:cli
 
@@ -26,7 +26,6 @@ requirements:
     - python >=3.6
     - bottleneck
     - click >=3.3
-    - cufflinks-py >=0.12.1
     - glpk >=4.61
     - hdf5 1.8.18|1.8.18.*
     - ipython >=6.2.1
@@ -36,11 +35,11 @@ requirements:
     - numexpr >=2.3.1
     - numpy >=1.14
     - pandas >=0.22,<0.23
-    - plotly >=2.5
+    - plotly >=3.3
     - pyomo >=5.4,<5.5
-    - ruamel.yaml <=0.15
+    - ruamel.yaml >=0.15.71,<0.16
     - scikit-learn >=0.19.1
-    - xarray >=0.10.0,<0.11
+    - xarray >=0.10.8,<0.11
 
 test:
   imports:
@@ -53,7 +52,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: A multi-scale energy systems (MUSES) modeling framework
+  summary: A multi-scale energy systems modelling framework
   description: |
     Calliope is a framework to develop energy system models, with a
     focus on flexibility, high spatial and temporal resolution, the
