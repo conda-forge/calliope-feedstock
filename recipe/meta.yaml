@@ -20,10 +20,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6,<3.8
     - pip
   run:
-    - python >=3.6
+    - python >=3.6,<3.8
     - bottleneck
     - click >=3.3
     - glpk >=4.61
