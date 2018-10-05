@@ -25,7 +25,7 @@ requirements:
   run:
     - python >=3.6,<3.8
     - bottleneck
-    - click >=3.3
+    - click >=3.3,<7
     - glpk >=4.61
     - hdf5 1.8.18|1.8.18.*
     - ipython >=6.2.1
