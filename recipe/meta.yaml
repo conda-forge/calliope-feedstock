@@ -1,6 +1,6 @@
 {% set name = "calliope" %}
-{% set version = "0.6.3" %}
-{% set sha256 = "6423bb66063d0d27c3c0d0b4791723a94f29e4075316ab29338e98de2e60e59b" %}
+{% set version = "0.6.4" %}
+{% set sha256 = "f2acad5427a27cf626b331bfa838c5ccd5b0b776322a046e0cf8e5355406a24a" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   noarch: python
   entry_points:
@@ -24,23 +24,24 @@ requirements:
     - pip
   run:
     - python >=3.6,<3.8
-    - bottleneck
-    - click >=3.3,<7
+    - bottleneck >=1.2
+    - click >=7,<8
     - glpk >=4.61
-    - hdf5 1.8.18|1.8.18.*
-    - ipython >=6.2.1
+    - hdf5
+    - ipython >=7
+    - ipdb >=0.11
     - jinja2 >=2.10
-    - libnetcdf 4.4.*
-    - natsort >=5.2
+    - libnetcdf
+    - natsort >=5
     - netcdf4 >=1.2.2
     - numexpr >=2.3.1
-    - numpy >=1.14
-    - pandas >=0.22,<0.23
-    - plotly >=3.3
-    - pyomo >=5.4,<5.5
+    - numpy >=1.15
+    - pandas >=0.24,<0.25
+    - plotly >=3.3,<4.0
+    - pyomo >=5.6,<5.7
     - ruamel.yaml >=0.15.71,<0.16
-    - scikit-learn >=0.19.1
-    - xarray >=0.10.8,<0.11
+    - scikit-learn >=0.20,<0.21
+    - xarray >=0.12,<0.13
 
 test:
   imports:
