@@ -1,6 +1,6 @@
 {% set name = "calliope" %}
-{% set version = "0.6.4" %}
-{% set sha256 = "f2acad5427a27cf626b331bfa838c5ccd5b0b776322a046e0cf8e5355406a24a" %}
+{% set version = "0.6.5" %}
+{% set sha256 = "ad2c6e8faf538d985e9f21a311642a519df1cd4130626ca4cfc53ca4ec591393" %}
 
 package:
   name: {{ name|lower }}
@@ -20,13 +20,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6,<3.8
+    - python >=3.7,<3.9
     - pip
   run:
-    - python >=3.6,<3.8
+    - python >=3.7,<3.9
     - bottleneck >=1.2
     - click >=7,<8
-    - glpk >=4.61
+    - glpk >=4.61,<4.63
     - hdf5
     - ipython >=7
     - ipdb >=0.11
@@ -36,12 +36,12 @@ requirements:
     - netcdf4 >=1.2.2
     - numexpr >=2.3.1
     - numpy >=1.15
-    - pandas >=0.24,<0.25
+    - pandas >=0.25,<0.26
     - plotly >=3.3,<4.0
     - pyomo >=5.6,<5.7
-    - ruamel.yaml >=0.15.71,<0.16
-    - scikit-learn >=0.20,<0.21
-    - xarray >=0.12,<0.13
+    - ruamel.yaml >=0.16
+    - scikit-learn >=0.22
+    - xarray >=0.14,<0.15
 
 test:
   imports:
