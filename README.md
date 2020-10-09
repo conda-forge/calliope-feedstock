@@ -5,9 +5,13 @@ Home: https://www.callio.pe/
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/calliope-feedstock/blob/master/LICENSE.txt)
 
 Summary: A multi-scale energy systems modelling framework
+
+Development: https://github.com/calliope-project/calliope
+
+Documentation: https://calliope.readthedocs.io/
 
 Calliope is a framework to develop energy system models, with a
 focus on flexibility, high spatial and temporal resolution, the
