@@ -1,6 +1,6 @@
 {% set name = "calliope" %}
-{% set version = "0.6.5" %}
-{% set sha256 = "ad2c6e8faf538d985e9f21a311642a519df1cd4130626ca4cfc53ca4ec591393" %}
+{% set version = "0.6.6" %}
+{% set sha256 = "af8771f99f3f54400acaec1bcf1ce00bb9973a61f3bba0503d1b7eb416b50282" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   noarch: python
   entry_points:
     - calliope = calliope.cli:cli
