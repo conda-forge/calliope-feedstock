@@ -1,6 +1,6 @@
 {% set name = "calliope" %}
-{% set version = "0.6.6.post1" %}
-{% set sha256 = "1dbd451e9b16fc50ad74bbc3815a935aae7f65c91e5e3b6329fd433829c528fa" %}
+{% set version = "0.6.7" %}
+{% set sha256 = "3c6abe539d239cd673128341495a966823b0419637f6f3ff11b63d69582de290" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   noarch: python
   entry_points:
     - calliope = calliope.cli:cli
@@ -32,13 +32,13 @@ requirements:
     - libnetcdf
     - natsort >=5
     - netcdf4 >=1.2.2
-    - numpy >=1.15
-    - pandas >=1.1,<1.2
+    - numpy >=1.15,<1.20
+    - pandas >=1.2,<1.3
     - plotly >=3.3,<4.0
-    - pyomo >=5.7,<5.8
+    - pyomo >=6.0,<6.1
     - ruamel.yaml >=0.16
-    - scikit-learn >=0.22
-    - xarray >=0.16,<0.17
+    - scikit-learn >=0.22,<0.24
+    - xarray >=0.17,<0.18
   run_constrained:
     - glpk >=4.61,<4.63
 
