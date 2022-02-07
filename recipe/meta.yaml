@@ -1,6 +1,6 @@
 {% set name = "calliope" %}
-{% set version = "0.6.7" %}
-{% set sha256 = "3c6abe539d239cd673128341495a966823b0419637f6f3ff11b63d69582de290" %}
+{% set version = "0.6.8" %}
+{% set sha256 = "27cd977eca7cfa161f008ce7eb5d6cb96beaec51e2b92486cf6ff79ad46659ac" %}
 
 package:
   name: {{ name|lower }}
