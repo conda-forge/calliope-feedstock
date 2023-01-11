@@ -156,6 +156,3 @@ Feedstock Maintainers
 * [@brynpickering](https://github.com/brynpickering/)
 * [@sjpfenninger](https://github.com/sjpfenninger/)
 
-
-<!-- dummy commit to enable rerendering -->
-
