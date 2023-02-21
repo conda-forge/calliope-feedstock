@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   noarch: python
   entry_points:
@@ -30,7 +30,7 @@ requirements:
     - ipython >=7
     - ipdb >=0.13
     - jinja2 >=2.10
-    - libnetcdf
+    - libnetcdf >=4.8,<4.9
     - natsort >=5
     - netcdf4 >=1.2.2
     - numpy >=1.23,<1.24
