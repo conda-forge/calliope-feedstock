@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   noarch: python
   entry_points:
@@ -24,15 +24,15 @@ requirements:
     - pip
   run:
     - python >=3.8,<3.10
-    - bottleneck
+    - bottleneck <2
     - click >=8,<9
-    - hdf5
-    - ipython >=7
-    - ipdb >=0.13
-    - jinja2 >=2.10
-    - libnetcdf
-    - natsort >=5
-    - netcdf4 >=1.2.2
+    - hdf5 <2.0
+    - ipython >=7,<9
+    - ipdb >=0.13,<1.0
+    - jinja2 >=2.10,<4
+    - libnetcdf <4.9
+    - natsort >=5,<9
+    - netcdf4 >=1.2.2,<2.0
     - numpy >=1.23,<1.24
     - pandas >=1.5,<1.6
     - plotly >=3.10,<3.11
