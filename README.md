@@ -1,11 +1,11 @@
-About calliope
-==============
+About calliope-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/calliope-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.callio.pe/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/calliope-feedstock/blob/main/LICENSE.txt)
 
 Summary: A multi-scale energy systems modelling framework
 
@@ -42,14 +42,14 @@ Current release info
 Installing calliope
 ===================
 
-Installing `calliope` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `calliope` from the `conda-forge/label/calliope_dev` channel can be achieved by adding `conda-forge/label/calliope_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/calliope_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `calliope` can be installed with `conda`:
+Once the `conda-forge/label/calliope_dev` channel has been enabled, `calliope` can be installed with `conda`:
 
 ```
 conda install calliope
@@ -64,26 +64,26 @@ mamba install calliope
 It is possible to list all of the versions of `calliope` available on your platform with `conda`:
 
 ```
-conda search calliope --channel conda-forge
+conda search calliope --channel conda-forge/label/calliope_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search calliope --channel conda-forge
+mamba search calliope --channel conda-forge/label/calliope_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search calliope --channel conda-forge
+mamba repoquery search calliope --channel conda-forge/label/calliope_dev
 
 # List packages depending on `calliope`:
-mamba repoquery whoneeds calliope --channel conda-forge
+mamba repoquery whoneeds calliope --channel conda-forge/label/calliope_dev
 
 # List dependencies of `calliope`:
-mamba repoquery depends calliope --channel conda-forge
+mamba repoquery depends calliope --channel conda-forge/label/calliope_dev
 ```
 
 
@@ -105,7 +105,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
