@@ -1,7 +1,7 @@
 {% set name = "calliope" %}
-{% set pypi_version = "0.7.0.dev3" %}
-{% set conda_version = "0.7.0dev3" %}
-{% set sha256 = "aadd9894a7f4f085b99c7c9eab5205479d5855b2f869d2b5a6ede17140092fa0" %}
+{% set pypi_version = "0.7.0.dev4" %}
+{% set conda_version = "0.7.0dev4" %}
+{% set sha256 = "ba83a13a191f52c936732176717312a20111c597b4a95bb8526c1b1825f84f4d" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   noarch: python
   entry_points:
