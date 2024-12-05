@@ -1,7 +1,7 @@
 {% set name = "calliope" %}
 {% set pypi_version = "0.7.0.dev5" %}
 {% set conda_version = "0.7.0dev5" %}
-{% set sha256 = "ba83a13a191f52c936732176717312a20111c597b4a95bb8526c1b1825f84f4d" %}
+{% set sha256 = "c8b2c75c6492b5527ffc182abd53d173243ef623ba9fac62db96059360035572" %}
 {% set python_min = "3.10" %}
 
 package:
