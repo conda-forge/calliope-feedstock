@@ -44,7 +44,7 @@ requirements:
     - pyomo >=6.8.2
     - pyparsing >=3.2
     - ruamel.yaml >=0.18
-    - typing-extensions >= 4
+    - typing-extensions >=4
     - xarray >=2024.1,<2024.4
   run_constrained:
     - glpk >=5,<5.1
