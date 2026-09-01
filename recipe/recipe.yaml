@@ -1,0 +1,83 @@
+schema_version: 1
+
+context:
+  name: calliope
+  version: "0.7.0"
+  python_min: "3.12"
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 58e4ba08dfda4d5b30b5169876126d6d72131b6d521a684f352bd49a75216be4
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - ${{ name }} = ${{ name }}.cli:cli
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - bottleneck >=1
+    - click >=8
+    - coin-or-cbc >=2.10.8
+    - geographiclib >=2
+    - highspy >=1.15
+    - ipdb >=0.13
+    - ipykernel >=6
+    - jinja2 >=3
+    - jsonref >=1.1
+    - jsonschema >=4
+    - libnetcdf >=4.10
+    - natsort >=8
+    - netcdf4 >=1.2
+    - numpy >=2.0
+    - pandas >=2.1.3
+    - pydantic >=2.11.4
+    - pyomo >=6.8.2
+    - pyparsing >=3.2
+    - ruamel.yaml >=0.18
+    - xarray >=2026.4
+
+tests:
+  - python:
+      imports:
+        - ${{ name }}
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - ${{ name }} --help
+
+about:
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: A multi-scale energy systems modelling framework
+  description: |
+    Calliope is a framework to develop energy system models, with a
+    focus on flexibility, high spatial and temporal resolution, the
+    ability to execute many runs based on the same base model, and
+    a clear separation of framework (code) and model (data).
+  homepage: https://www.callio.pe/
+  documentation: https://calliope.readthedocs.io/
+  repository: https://github.com/calliope-project/calliope
+
+extra:
+  recipe-maintainers:
+    - sjpfenninger
+    - brynpickering
